@@ -1,11 +1,10 @@
 ---
-title: 'Azure CLI: Create a SQL database | Microsoft Docs'
-description: Learn how to create a SQL Database logical server, server-level firewall rule, and databases using the Azure CLI. 
-keywords: sql database tutorial, create a sql database
+title: 'GitHub Repository for the #sqlmalagavii Meetup'
+description: Code and manuals used on the meetup to explain the usage of Azure SQL Datbase. 
+keywords: sql database, create a sql database
 services: sql-database
 documentationcenter: ''
-author: CarlRabeler
-manager: jhubbard
+author: carlosbourque
 editor: ''
 
 ms.assetid: 
@@ -14,9 +13,8 @@ ms.custom: quick start create
 ms.workload: data-management
 ms.tgt_pltfrm: na
 ms.devlang: azurecli
-ms.topic: hero-article
-ms.date: 04/17/2017
-ms.author: carlrab
+ms.date: 05/20/2017
+ms.author: carlosbourque
 ---
 
 # GitHub Repository for the #sqlservermalagavii Meetup
@@ -27,6 +25,10 @@ ms.author: carlrab
 
 Log in to your Azure subscription with the [az login](/cli/azure/#login) command and follow the on-screen directions.
 
-```azurecli
+``` azurecli
 az login
 ```
+
+The content of this repository is based on the following Azure documentation sites:
+
+- [Azure SQL Database Documentation] (https://docs.microsoft.com/en-us/azure/sql-database/)

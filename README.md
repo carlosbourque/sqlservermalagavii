@@ -1,1 +1,1 @@
-# sqlservermalagavii
+# GitHub Repository for the #sqlservermalagavii Meetup

@@ -4,21 +4,21 @@
     "parameters": {
         "servers_sqlmalagavii_sql_name": {
             "defaultValue": "sqlmalagavii-sql",
-            "type": "String"
+            "type": "string"
         },
         "databases_master_name": {
             "defaultValue": "sqlmalagavii-sql/master",
-            "type": "String"
+            "type": "string"
         },
         "databases_sqlmalagavii_db_name": {
             "defaultValue": "sqlmalagavii-sql/sqlmalagavii-db",
-            "type": "String"
+            "type": "string"
         },
         "administrator_login": {
-            "type": "String"
+            "type": "string"
         },
         "administrator_password": {
-            "type": "String"
+            "type": "string"
         }
     },
     "variables": {},

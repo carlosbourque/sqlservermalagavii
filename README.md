@@ -8,4 +8,4 @@
 
 The content of this repository is based on the following Azure documentation sites:
 
-- [Azure SQL Database Documentation] (https://docs.microsoft.com/en-us/azure/sql-database/)
+- [Azure SQL Database Documentation](https://docs.microsoft.com/en-us/azure/sql-database/)

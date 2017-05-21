@@ -1,0 +1,101 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "servers_sqlmalagavii_sql_name": {
+            "defaultValue": "sqlmalagavii-sql",
+            "type": "String"
+        },
+        "databases_master_name": {
+            "defaultValue": "sqlmalagavii-sql/master",
+            "type": "String"
+        },
+        "databases_sqlmalagavii_db_name": {
+            "defaultValue": "sqlmalagavii-sql/sqlmalagavii-db",
+            "type": "String"
+        },
+        "administrator_login": {
+            "type": "String"
+        },
+        "administrator_password": {
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "comments": "Generalized from resource: '/subscriptions/6eb28a57-2c08-4afd-9840-4054872a9556/resourceGroups/sqlmalagavii-rg/providers/Microsoft.Sql/servers/sqlmalagavii-sql'.",
+            "type": "Microsoft.Sql/servers",
+            "kind": "v12.0",
+            "name": "[parameters('servers_sqlmalagavii_sql_name')]",
+            "apiVersion": "2014-04-01-preview",
+            "location": "North Europe",
+            "properties": {
+                "administratorLogin": "[parameters('administrator_login')]",
+                "administratorLoginPassword": "[parameters('administrator_password')]",
+                "version": "12.0"
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6eb28a57-2c08-4afd-9840-4054872a9556/resourceGroups/sqlmalagavii-rg/providers/Microsoft.Sql/servers/sqlmalagavii-sql/databases/master'.",
+            "type": "Microsoft.Sql/servers/databases",
+            "kind": "v12.0,system",
+            "name": "[parameters('databases_master_name')]",
+            "apiVersion": "2014-04-01-preview",
+            "location": "North Europe",
+            "properties": {
+                "databaseId": "0d4de7e4-dd7f-4c84-8cbb-cc5b4f0ca275",
+                "edition": "System",
+                "status": "Online",
+                "serviceLevelObjective": "System2",
+                "collation": "SQL_Latin1_General_CP1_CI_AS",
+                "maxSizeBytes": "32212254720",
+                "creationDate": "2017-05-21T15:06:28.873Z",
+                "currentServiceObjectiveId": "620323bf-2879-4807-b30d-c2e6d7b3b3aa",
+                "requestedServiceObjectiveId": "620323bf-2879-4807-b30d-c2e6d7b3b3aa",
+                "requestedServiceObjectiveName": "System2",
+                "sampleName": null,
+                "defaultSecondaryLocation": "West Europe",
+                "earliestRestoreDate": null,
+                "elasticPoolName": null,
+                "containmentState": 2,
+                "readScale": "Disabled",
+                "failoverGroupId": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_sqlmalagavii_sql_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/6eb28a57-2c08-4afd-9840-4054872a9556/resourceGroups/sqlmalagavii-rg/providers/Microsoft.Sql/servers/sqlmalagavii-sql/databases/sqlmalagavii-db'.",
+            "type": "Microsoft.Sql/servers/databases",
+            "kind": "v12.0,user",
+            "name": "[parameters('databases_sqlmalagavii_db_name')]",
+            "apiVersion": "2014-04-01-preview",
+            "location": "North Europe",
+            "properties": {
+                "databaseId": "3fe0e056-4e22-4297-8015-3143232efc50",
+                "edition": "Standard",
+                "status": "Online",
+                "serviceLevelObjective": "S0",
+                "collation": "SQL_Latin1_General_CP1_CI_AS",
+                "maxSizeBytes": "268435456000",
+                "creationDate": "2017-05-21T15:08:58.92Z",
+                "currentServiceObjectiveId": "f1173c43-91bd-4aaa-973c-54e79e15235b",
+                "requestedServiceObjectiveId": "f1173c43-91bd-4aaa-973c-54e79e15235b",
+                "requestedServiceObjectiveName": "S0",
+                "sampleName": null,
+                "defaultSecondaryLocation": "West Europe",
+                "earliestRestoreDate": "2017-05-21T15:19:39.243Z",
+                "elasticPoolName": null,
+                "containmentState": 2,
+                "readScale": "Disabled",
+                "failoverGroupId": null
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_sqlmalagavii_sql_name'))]"
+            ]
+        }
+    ]
+}

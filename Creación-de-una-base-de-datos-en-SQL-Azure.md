@@ -26,7 +26,7 @@ az group create --name sqlmalagavii-rg --location northeurope
 We create a server where the database will be hosted
 
 ```azurecli
-az sql server create --name sqlmalagavii-sql2 --resource-group sqlmalagavii-rg --location northeurope  --admin-user Carlos --admin-password ChangeYourAdminPassword1
+az sql server create --name sqlmalagavii-sql --resource-group sqlmalagavii-rg --location northeurope  --admin-user Carlos --admin-password ChangeYourAdminPassword1
 ```
 
 #### 4.- Set up the firewall rule
@@ -48,3 +48,7 @@ az sql db create --resource-group sqlmalagavii-rg --server sqlmalagavii-sql2 --n
 ```azurecli
 az group delete --name sqlmalagavii-rg
 ```
+
+### Using Azure Resouce Manager
+
+[Azure Quickstart Templates](https://github.com/Azure/azure-quickstart-templates)

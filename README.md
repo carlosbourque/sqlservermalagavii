@@ -21,9 +21,32 @@ az login
 Let's create a resource group for our tests in Azure. The resource group will be called 'sqlmalagavii'
 
 ```azurecli
-az group create --name sqlmalagavii --location northeurope
+az group create --name sqlmalagavii-rg --location northeurope
 ```
 
+#### 3.- Create a server
+
+We create a server where the database will be hosted
+
+```azurecli
+az sql server create --name sqlmalagavii-sql2 --resource-group sqlmalagavii-rg --location northeurope  --admin-user Carlos --admin-password ChangeYourAdminPassword1
+```
+
+#### 4.- Set up the firewall rule
+
+```azurecli
+az sql server firewall-rule create --resource-group sqlmalagavii-rg --server sqlmalagavii-sql2 -n AllowYourIp --start-ip-address [yourIP]  --end-ip-address [yourIP]
+```
+
+#### 4.- Add the database
+
+Then, we add the database to the server we just created
+
+```azurecli
+az sql db create --resource-group sqlmalagavii-rg --server sqlmalagavii-sql2 --name sqlmalagavii-db --sample-name AdventureWorksLT --service-objective S0
+```
+
+### References
 
 The content of this repository is based on the following Azure documentation sites:
 

@@ -32,7 +32,7 @@ az sql server create --name sqlmalagavii-sql --resource-group sqlmalagavii-rg --
 #### 4.- Set up the firewall rule
 
 ```azurecli
-az sql server firewall-rule create --resource-group sqlmalagavii-rg --server sqlmalagavii-sql2 -n AllowYourIp --start-ip-address [yourIP]  --end-ip-address [yourIP]
+az sql server firewall-rule create --resource-group sqlmalagavii-rg --server sqlmalagavii-sql -n AllowYourIp --start-ip-address [yourIP]  --end-ip-address [yourIP]
 ```
 
 #### 5.- Add the database
@@ -40,7 +40,7 @@ az sql server firewall-rule create --resource-group sqlmalagavii-rg --server sql
 Then, we add the database to the server we just created
 
 ```azurecli
-az sql db create --resource-group sqlmalagavii-rg --server sqlmalagavii-sql2 --name sqlmalagavii-db --sample-name AdventureWorksLT --service-objective S0
+az sql db create --resource-group sqlmalagavii-rg --server sqlmalagavii-sql --name sqlmalagavii-db --sample-name AdventureWorksLT --service-objective S0
 ```
 
 #### 6.- Remove the resource group

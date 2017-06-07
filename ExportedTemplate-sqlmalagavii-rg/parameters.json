@@ -1,0 +1,24 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "servers_sqlmalagavii_sql_name": {
+            "value": null
+        },
+        "storageAccounts_sqlmalagavii_name": {
+            "value": null
+        },
+        "databases_master_name": {
+            "value": null
+        },
+        "databases_sqlmalagavii_db_name": {
+            "value": null
+        },
+        "firewallRules_AllowAllWindowsAzureIps_name": {
+            "value": null
+        },
+        "firewallRules_AllowYourIp_name": {
+            "value": null
+        }
+    }
+}
